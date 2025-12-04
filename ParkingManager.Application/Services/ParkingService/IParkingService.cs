@@ -6,5 +6,5 @@ public interface IParkingService
 {
     Task<ParkVehicleResponse> ParkVehicleAsync(ParkVehicleRequest request);
     Task<LeaveParkingSpaceResponse> LeaveParkingSpaceAsync(LeaveParkingSpaceRequest request);
-    Task<AvailableSpacesResponse> GetAvailableSpacesAsync();
+    Task<ParkingStatusResponse> GetAvailableSpacesAsync();
 }

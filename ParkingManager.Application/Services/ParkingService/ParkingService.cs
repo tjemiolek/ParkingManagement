@@ -50,11 +50,11 @@ public class ParkingService : IParkingService
             reservation.StartDate);
     }
 
-    public async Task<AvailableSpacesResponse> GetAvailableSpacesAsync()
+    public async Task<ParkingStatusResponse> GetAvailableSpacesAsync()
     {
         var allParkingSpaces = await _parkingSpaceRepository.GetAllAsync();
 
-        return new AvailableSpacesResponse(allParkingSpaces.Count(ps => !ps.Reservations.Any(r => !r.EndDate.HasValue)),
+        return new ParkingStatusResponse(allParkingSpaces.Count(ps => !ps.Reservations.Any(r => !r.EndDate.HasValue)),
             allParkingSpaces.Count(ps => ps.Reservations.Any(r => !r.EndDate.HasValue)));
     }
 
