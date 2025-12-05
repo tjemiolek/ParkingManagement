@@ -18,11 +18,12 @@ public class ApiExceptionHandler : IExceptionHandler
     {
         _logger.LogError(exception, "Error occured while performing operation");
 
+        // by default every exception returns 500
         var problemDetails = new ProblemDetails
         {
             Status = StatusCodes.Status500InternalServerError,
             Detail = exception.Message,
-            Title = "Server error"
+            Title = exception.Message
         };
 
         httpContext.Response.StatusCode = problemDetails.Status.Value;
