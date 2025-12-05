@@ -18,7 +18,6 @@
     <ProjectReference Include="..\ParkingManager.Application\ParkingManager.Application.csproj" />
     <ProjectReference Include="..\ParkingManager.Domain\ParkingManager.Domain.csproj" />
     <ProjectReference Include="..\ParkingManager.Web\ParkingManager.Web.csproj" />
-    <ProjectReference Include="..\ParkingManager\ParkingManager.Web.csproj" />
   </ItemGroup>
 
   <ItemGroup>
